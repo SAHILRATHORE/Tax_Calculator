@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-dark">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-center mb-4" style="color: #ffc107;">Tax <span style="color: #17a2b8;">Calculator</span></h1>
+                    <form id="taxForm">
+                        <div class="form-group">
+                            <label for="income">Gross annual income (in lakhs)</label>
+                            <input type="number" class="form-control" id="income" step="0.01" required>
+                            <div class="error-icon">
+                                <i class="fas fa-exclamation-circle fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="extraIncome">Extra Income in Lakhs</label>
+                            <input type="number" class="form-control" id="extraIncome" step="0.01">
+                            <div class="error-icon">
+                                <i class="fas fa-exclamation-circle fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="deductions">Deductions in Lakhs</label>
+                            <input type="number" class="form-control" id="deductions" step="0.01">
+                            <div class="error-icon">
+                                <i class="fas fa-exclamation-circle fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <select class="form-control" id="age" required>
+                                <option value="">Select</option>
+                                <option value="<40">&lt; 40</option>
+                                <option value="≥40&<60">&ge; 40 &amp; &lt; 60</option>
+                                <option value="≥60">&ge; 60</option>
+                            </select>
+                            <div class="error-icon">
+                                <i class="fas fa-exclamation-circle fa-lg"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Calculate Tax</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
